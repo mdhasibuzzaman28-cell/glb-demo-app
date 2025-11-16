@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Hero from './components/Hero';
 import Section from './components/Section';
+import ShowcaseSection from './components/ShowcaseSection';
 import CustomCursor from './components/CustomCursor';
 import { useScrollProgress } from './hooks/useScrollProgress';
 
@@ -79,6 +80,8 @@ function App() {
     <div ref={containerRef} className="bg-black">
       <CustomCursor />
       <Hero />
+
+      <ShowcaseSection />
 
       {sections.map((section, index) => (
         <Section

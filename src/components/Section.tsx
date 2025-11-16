@@ -103,7 +103,12 @@ export default function Section({
             transition: 'transform 0.1s linear'
           }}
         >
-          <ThreeDPlaceholder type={id} color={color} />
+          <ThreeDPlaceholder
+            type={id}
+            color={color}
+            title={title}
+            description={description}
+          />
         </div>
       </div>
     </div>
