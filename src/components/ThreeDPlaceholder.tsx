@@ -80,7 +80,7 @@ export default function ThreeDPlaceholder({
         />
 
         <div className="relative w-full h-full">
-          <Model3DViewer modelPath={modelPath} autoRotate={true} />
+          <Model3DViewer modelPath={modelPath} />
 
           <div className="absolute top-6 left-6 z-10">
             <div className="glass-card px-3 py-2 rounded-xl backdrop-blur-xl">

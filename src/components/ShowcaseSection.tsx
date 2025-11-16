@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Maximize2, Eye, RotateCw, Box } from 'lucide-react';
+import { Maximize2, Eye, Box } from 'lucide-react';
 import Model3DViewer from './Model3DViewer';
 import FullscreenDrawer from './FullscreenDrawer';
 
@@ -35,7 +35,7 @@ export default function ShowcaseSection() {
 
           <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden glass-card backdrop-blur-xl group">
             <div className="absolute inset-0">
-              <Model3DViewer modelPath={modelPath} autoRotate={true} />
+              <Model3DViewer modelPath={modelPath} />
             </div>
 
             <div className="absolute top-6 left-6 z-10">
@@ -48,8 +48,8 @@ export default function ShowcaseSection() {
             </div>
 
             <div className="absolute top-6 right-6 z-10 flex gap-3">
-              <div className="glass-card px-4 py-2 rounded-xl backdrop-blur-xl text-white">
-                <RotateCw className="w-5 h-5 animate-spin-slow" />
+              <div className="glass-card px-4 py-2 rounded-xl backdrop-blur-xl text-white text-xs">
+                <span>Drag to rotate • Scroll to zoom</span>
               </div>
             </div>
 

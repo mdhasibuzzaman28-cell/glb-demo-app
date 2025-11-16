@@ -1,11 +1,10 @@
-import { useRef, useState, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useRef, Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface Model3DProps {
   modelPath: string;
-  autoRotate?: boolean;
 }
 
 function Model({ modelPath }: { modelPath: string }) {
@@ -28,7 +27,7 @@ function Loader() {
   );
 }
 
-export default function Model3DViewer({ modelPath, autoRotate = false }: Model3DProps) {
+export default function Model3DViewer({ modelPath }: Model3DProps) {
   return (
     <Canvas
       camera={{ position: [5, 5, 5], fov: 50 }}
@@ -53,8 +52,7 @@ export default function Model3DViewer({ modelPath, autoRotate = false }: Model3D
       </Suspense>
 
       <OrbitControls
-        autoRotate={autoRotate}
-        autoRotateSpeed={2}
+        autoRotate={false}
         enableDamping
         dampingFactor={0.05}
         minDistance={2}

@@ -58,7 +58,7 @@ export default function Section({
       <ParallaxText
         text={title.toUpperCase()}
         speed={0.5}
-        className="absolute top-1/2 -translate-y-1/2 left-0 text-[12vw] font-black text-white/5 whitespace-nowrap pointer-events-none"
+        className="absolute bottom-1/4 left-0 text-[12vw] font-black text-white/5 whitespace-nowrap pointer-events-none"
       />
 
       <div className={`relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center ${
